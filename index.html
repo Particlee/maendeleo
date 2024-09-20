@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maendeleo Machinga - Home</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to Maendeleo Machinga Group</h1>
+      <nav>
+        <a href="products.html">View Products</a>
+        <a href="cart.php">Shopping Cart</a>
+      </nav>
+    </header>
+
+    <section class="background-slideshow">
+      <img src="images/all star.jpg" alt="Background Image 1" class="active" />
+      <img src="images/combo shirt and shoe.jpeg" alt="Background Image 2" />
+      <img src="images/dark tshirt.jpg" alt="Background Image 3" />
+      <img src="images/lue tshirt.jpg" alt="Background Image 4" />
+      <img src="images/moca 2.jpg" alt="Background Image 5" />
+      <img src="images/pink bag.jpg" alt="Background Image 6" />
+      <img src="images/sneaker gray.jpg" alt="Background Image 7" />
+    </section>
+
+    <section class="slideshow">
+      <img src="images/all star.jpg" alt="Image 1" class="active" />
+      <img src="images/combo shirt and shoe.jpeg" alt="Image 2" />
+      <img src="images/dark tshirt.jpg" alt="Image 3" />
+      <img src="images/lue tshirt.jpg" alt="Image 4" />
+      <img src="images/moca 2.jpg" alt="Image 5" />
+      <img src="images/pink bag.jpg" alt="Image 6" />
+      <img src="images/sneaker gray.jpg" alt="Image 7" />
+    </section>
+
+    <!-- Showcase Advertisement Section -->
+    <section class="showcase-advertisement">
+      <h2>Special Offer!</h2>
+      <div class="advertisement-content">
+        <img src="images/sell.jpg" alt="Special Offer" />
+        <div class="advertisement-text">
+          <h3>Get 20% Off on Selected Items!</h3>
+          <p>
+            Shop our latest collection and enjoy exclusive discounts. Don't miss
+            out!
+          </p>
+          <a href="products.html" class="shop-now-button">Shop Now</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="advertisements">
+      <h2>Shop with Us..</h2>
+      <p>Essential Style for Everyday!</p>
+    </section>
+
+    <script>
+      // JavaScript for the slideshow
+      let currentIndex = 0;
+      const slides = document.querySelectorAll(".slideshow img");
+      const backgroundSlides = document.querySelectorAll(
+        ".background-slideshow img"
+      );
+      const totalSlides = slides.length;
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle("active", i === index);
+        });
+        backgroundSlides.forEach((slide, i) => {
+          slide.classList.toggle("active", i === index);
+        });
+      }
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        showSlide(currentIndex);
+      }
+
+      setInterval(nextSlide, 3000); // Change slide every 3 seconds
+    </script>
+
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2024 Maendeleo Machinga Group. All Rights Reserved.</p>
+        <ul class="footer-links">
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/privacy">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <a href="https://facebook.com" target="_blank">Facebook</a>
+        <a href="https://twitter.com" target="_blank">Twitter</a>
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+      </div>
+    </footer>
+  </body>
+</html>

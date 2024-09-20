@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  overflow: auto; /* Allow scrolling */
+}
+
+.background-slideshow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Send it to the back */
+}
+
+.background-slideshow img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the whole area */
+  opacity: 0.5;
+  transition: opacity 1s ease-in-out; /* Smooth transition */
+}
+
+.background-slideshow img.active {
+  opacity: 1; /* Show active image */
+}
+
+.slideshow {
+  position: relative;
+  z-index: 1; /* Bring this to front */
+  max-width: 50%;
+  margin: 20px auto; /* Center the slideshow */
+  overflow: hidden;
+}
+
+.slideshow img {
+  width: 100%;
+  height: auto;
+  display: none; /* Hide all images initially */
+}
+
+.slideshow img.active {
+  display: block; /* Show only active image */
+}
+
+.advertisements {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+nav {
+  text-align: center;
+  margin: 20px 0;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #aea6ea;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #007bff;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-social a {
+  margin: 0 10px;
+  color: #fff;
+}
+.showcase-advertisement {
+  background-color: #f9f9f9;
+  padding: 20px;
+  text-align: center;
+  margin: 20px 0;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.advertisement-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.advertisement-content img {
+  max-width: 250px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.advertisement-text {
+  text-align: center;
+}
+
+.shop-now-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.shop-now-button:hover {
+  background-color: #0056b3;
+}
